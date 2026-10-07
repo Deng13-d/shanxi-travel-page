@@ -652,7 +652,7 @@
           "type": "relative-schematic",
           "bounds": null
         },
-        "baseImage": "assets/maps/templates/template-07-compact-basin.webp",
+        "baseImage": "assets/trip/shanxi-route-map.png",
         "title": "山西 · 旅行路线",
         "ariaLabel": "山西模板化旅行路线示意图，共4天",
         "description": "太原、五台山、浑源、大同与应县木塔的行程示意。",
