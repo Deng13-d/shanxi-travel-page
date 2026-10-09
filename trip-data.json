@@ -14,12 +14,12 @@
     "language": "zh-CN",
     "persistence": {
       "mode": "d1",
-  "apiBase": "/api/trip",
-  "sharedCollections": [
-    "todos",
-    "tickets",
-    "ledger"
-  ]
+      "apiBase": "/api/trip",
+      "sharedCollections": [
+        "todos",
+        "tickets",
+        "ledger"
+      ]
     }
   },
   "metadata": {
@@ -28,7 +28,7 @@
     "language": "zh-CN",
     "assets": {
       "routeMaps": [
-        "assets/maps/templates/template-07-compact-basin.webp"
+        "assets/trip/shanxi-route-map.png"
       ],
       "backgrounds": [
         {
@@ -43,9 +43,9 @@
   "trip": {
     "status": "draft",
     "startDate": "2026-10-17",
-    "endDate": "2026-10-22",
-    "dayCount": 6,
-    "nightCountAway": 5,
+    "endDate": "2026-10-23",
+    "dayCount": 7,
+    "nightCountAway": 6,
     "countries": [
       {
         "code": "CN",
@@ -63,7 +63,7 @@
       "大同",
       "应县"
     ],
-    "routeSummary": "太原 → 五台山 → 浑源古城/永安寺 → 大同 → 应县木塔 → 太原",
+    "routeSummary": "惠州 → 武汉中转一日游 → 太原 → 五台山 → 浑源古城/永安寺 → 大同 → 应县木塔 → 太原 → 广州（10月24日凌晨抵达）",
     "groupSize": null,
     "primaryDestinationName": "山西",
     "heroTitle": "山西自驾之旅"
@@ -73,7 +73,7 @@
       "id": "outbound",
       "direction": "outbound",
       "status": "confirmed",
-      "title": "去程｜广州 → 太原"
+      "title": "去程｜惠州 → 武汉 → 太原"
     },
     {
       "id": "return",
@@ -84,54 +84,84 @@
   ],
   "flights": [
     {
-      "id": "flight-outbound-mu5252",
+      "id": "flight-outbound-mu2516",
       "journeyId": "outbound",
       "sequence": 1,
       "airline": {
         "nameZh": "东方航空"
       },
-      "flightNumber": "MU5252",
+      "flightNumber": "MU2516",
       "departure": {
-        "airportCode": "CAN",
-        "airport": "广州白云机场T3",
-        "city": "广州",
+        "airportCode": "HUZ",
+        "airport": "惠州平潭机场",
+        "city": "惠州",
         "date": "2026-10-17",
-        "time": "11:50",
+        "time": "22:50",
+        "utcOffset": "+08:00"
+      },
+      "arrival": {
+        "airportCode": "WUH",
+        "airport": "武汉天河机场T3",
+        "city": "武汉",
+        "date": "2026-10-18",
+        "time": "00:35",
+        "utcOffset": "+08:00"
+      },
+      "duration": "1h45m",
+      "status": "confirmed"
+    },
+    {
+      "id": "flight-outbound-mu9934",
+      "journeyId": "outbound",
+      "sequence": 2,
+      "airline": {
+        "nameZh": "东方航空"
+      },
+      "flightNumber": "MU9934",
+      "departure": {
+        "airportCode": "WUH",
+        "airport": "武汉天河机场T3",
+        "city": "武汉",
+        "date": "2026-10-18",
+        "time": "21:05",
         "utcOffset": "+08:00"
       },
       "arrival": {
         "airportCode": "TYN",
         "airport": "太原武宿机场T2",
         "city": "太原",
-        "date": "2026-10-17",
-        "time": "14:45",
+        "date": "2026-10-18",
+        "time": "23:00",
         "utcOffset": "+08:00"
       },
-      "duration": "2h55m",
+      "connectionFromPrevious": {
+        "plannedDurationText": "武汉中转20小时30分钟 · 市区一日游"
+      },
+      "duration": "1h55m",
       "status": "confirmed"
     },
     {
-      "id": "flight-return-hu7250",
+      "id": "flight-return-hu7240",
       "journeyId": "return",
       "sequence": 1,
       "airline": {
         "nameZh": "新海航/海南航空"
       },
-      "flightNumber": "HU7250",
+      "flightNumber": "HU7240",
       "departure": {
         "airportCode": "TYN",
         "airport": "太原武宿机场T1",
         "city": "太原",
-        "date": "2026-10-22",
-        "time": "17:10",
+        "date": "2026-10-23",
+        "time": "22:00",
         "utcOffset": "+08:00"
       },
       "arrival": {
         "airportCode": "CAN",
         "airport": "广州白云机场T3",
         "city": "广州",
-        "date": "2026-10-22",
-        "time": "20:15",
+        "date": "2026-10-24",
+        "time": "01:05",
         "utcOffset": "+08:00"
       },
       "duration": "3h05m",
@@ -153,16 +183,16 @@
         "payAtCounter": null
       },
       "pickup": {
-        "date": "2026-10-17",
-        "time": "待补充",
+        "date": "2026-10-19",
+        "time": "08:00–09:00（建议，待确认）",
         "location": "太原武宿机场",
         "utcOffset": "+08:00"
       },
       "dropoff": {
-        "date": "2026-10-22",
-        "time": "14:00前后",
+        "date": "2026-10-23",
+        "time": "19:00前后（建议，待确认）",
         "location": "太原武宿机场",
-        "recommendedArrivalTime": "14:00",
+        "recommendedArrivalTime": "19:00",
         "utcOffset": "+08:00"
       },
       "missingFields": [
@@ -175,8 +205,11 @@
     },
     "rentalChecklist": [],
     "drivingNotes": [
-      "Day3五台山→浑源→大同，建议07:30左右出发。",
-      "Day5大同→应县木塔→太原机场附近，建议只安排应县木塔。",
+      "Day3（10月19日）08:00–09:00取车，约09:00出发去五台山；前一晚晚到，避免疲劳驾驶。",
+      "Day4（10月20日）五台山→浑源→大同，建议08:30–09:00出发，17:00左右离开浑源。",
+      "Day6（10月22日）大同→应县木塔→太原市区，预留午餐与休息时间。",
+      "Day7（10月23日）19:00前后还车，19:30–20:00到太原武宿T1；确认门店营业及接驳安排。",
+      "建议10月19日上午取车、23日晚还车；租期和超时费用按租车公司24小时计费规则确认。",
       "山西10月昼夜温差大，山路尽量白天驾驶。"
     ],
     "drivingReferenceLinks": [],
@@ -187,31 +220,121 @@
     {
       "day": 1,
       "date": "2026-10-17",
-      "title": "抵达太原｜入住与市区夜游",
+      "title": "惠州出发 → 武汉｜机场附近过夜",
       "locations": [
-        "太原",
-        "钟楼街",
-        "柳巷",
-        "食品街"
+        "惠州平潭机场",
+        "武汉天河机场T3"
       ],
       "schedule": [
         {
-          "id": "d1-flight",
-          "time": "11:50–14:45",
-          "type": "flight",
-          "text": "东方航空 MU5252：广州白云T3 → 太原武宿T2"
+          "id": "d1-airport",
+          "time": "20:30前后",
+          "type": "transfer",
+          "text": "抵达惠州平潭机场，办理值机与安检"
         },
         {
-          "id": "d1-evening",
-          "time": "17:00–20:30",
-          "type": "walk",
-          "text": "钟楼街、柳巷、食品街夜游与晚餐"
+          "id": "d1-flight",
+          "time": "22:50–次日00:35",
+          "type": "flight",
+          "text": "东方航空 MU2516：惠州平潭 → 武汉天河T3，10月18日00:35抵达"
+        },
+        {
+          "id": "d1-hotel",
+          "time": "次日01:30–02:00",
+          "type": "check-in",
+          "text": "入住武汉天河机场T3附近酒店，具体酒店待定；预订10月17日入住、18日退房，提前说明凌晨到达并确认24小时前台、接机与行李寄存"
+        },
+        {
+          "id": "d1-baggage",
+          "time": "中转提示",
+          "type": "note",
+          "text": "向航空公司确认行李是否直挂、能否领取，以及武汉至太原是否需重新办理值机"
         }
       ]
     },
     {
       "day": 2,
       "date": "2026-10-18",
+      "title": "武汉一日游｜湖北省博物馆 → 黄鹤楼 → 太原",
+      "locations": [
+        "武汉",
+        "湖北省博物馆",
+        "黄鹤楼",
+        "武汉天河机场T3",
+        "太原武宿机场T2"
+      ],
+      "schedule": [
+        {
+          "id": "d2-check-out",
+          "time": "08:00–08:45",
+          "type": "check-out",
+          "text": "早餐、退房，行李寄存在机场附近酒店，提前确认取行李及送机安排"
+        },
+        {
+          "id": "d2-museum-transfer",
+          "time": "08:45–10:00",
+          "type": "transfer",
+          "text": "前往湖北省博物馆，交通按约1–1.5小时预留"
+        },
+        {
+          "id": "d2-hubei-museum",
+          "time": "10:00–12:30",
+          "type": "attraction",
+          "text": "湖北省博物馆：重点看曾侯乙编钟、越王勾践剑，以当天展厅开放情况为准；提前关注官方预约并选择上午时段",
+          "ticketIds": [
+            "ticket-hubei-museum"
+          ]
+        },
+        {
+          "id": "d2-lunch",
+          "time": "12:30–13:30",
+          "type": "restaurant",
+          "text": "博物馆附近午餐，可选湖北菜、排骨藕汤，不专门绕路找店"
+        },
+        {
+          "id": "d2-tower-transfer",
+          "time": "13:30–14:15",
+          "type": "transfer",
+          "text": "前往黄鹤楼，交通按约30–45分钟预留"
+        },
+        {
+          "id": "d2-yellow-crane-tower",
+          "time": "14:15–16:00",
+          "type": "attraction",
+          "text": "黄鹤楼登楼与园区慢逛，控制在约1.5–2小时；不再加东湖、昙华林或跨江游览",
+          "ticketIds": [
+            "ticket-yellow-crane-tower"
+          ]
+        },
+        {
+          "id": "d2-airport-return",
+          "time": "16:00–18:30",
+          "type": "transfer",
+          "text": "结束游览，返回机场附近酒店取行李，18:30前后到武汉天河T3；如遇拥堵提前返程"
+        },
+        {
+          "id": "d2-airport",
+          "time": "18:30–21:05",
+          "type": "rest",
+          "text": "机场晚餐、值机与安检，留足中转余量"
+        },
+        {
+          "id": "d2-flight",
+          "time": "21:05–23:00",
+          "type": "flight",
+          "text": "东方航空 MU9934：武汉天河T3 → 太原武宿T2"
+        },
+        {
+          "id": "d2-hotel",
+          "time": "23:00后",
+          "type": "check-in",
+          "text": "入住太原机场附近或便于次日上午取车的酒店（待定），当晚以休息为主，不安排深夜长途驾驶"
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "date": "2026-10-19",
       "title": "太原 → 五台山｜台怀镇寺庙群",
       "locations": [
         "太原",
@@ -223,25 +346,43 @@
       ],
       "schedule": [
         {
-          "id": "d2-drive",
-          "time": "07:30–11:00",
-          "type": "drive",
-          "text": "早餐后驾车前往五台山台怀镇，约3–4小时"
+          "id": "d3-pickup",
+          "time": "08:00–09:00",
+          "type": "transfer",
+          "text": "早餐、太原取车并检查车辆，租车公司与订单待补充"
         },
         {
-          "id": "d2-temples",
+          "id": "d3-drive",
+          "time": "09:00–12:30",
+          "type": "drive",
+          "text": "驾车前往五台山台怀镇，约3–4小时，景区进出与停车另留余量"
+        },
+        {
+          "id": "d3-lunch",
+          "time": "12:30–13:30",
+          "type": "restaurant",
+          "text": "台怀镇午餐、寄存行李"
+        },
+        {
+          "id": "d3-temples",
           "time": "13:30–17:30",
           "type": "attraction",
-          "text": "五爷庙、塔院寺、显通寺、菩萨顶，按体力删减",
+          "text": "菩萨顶、显通寺、塔院寺、五爷庙；按到达时间、开放与排队情况调整，不安排登台顶或大朝台，不为补景点赶路",
           "ticketIds": [
             "ticket-wutai"
           ]
+        },
+        {
+          "id": "d3-hotel",
+          "time": "晚上",
+          "type": "check-in",
+          "text": "台怀镇晚餐、入住休息；酒店待定，优先确认供暖及停车"
         }
       ]
     },
     {
-      "day": 3,
-      "date": "2026-10-19",
+      "day": 4,
+      "date": "2026-10-20",
       "title": "五台山 → 浑源 → 大同｜古建与长距离转场",
       "locations": [
         "五台山",
@@ -251,20 +392,20 @@
       ],
       "schedule": [
         {
-          "id": "d3-drive-hunyuan",
-          "time": "07:30–11:00",
+          "id": "d4-drive-hunyuan",
+          "time": "08:30–12:00",
           "type": "drive",
-          "text": "早餐后离开五台山，前往浑源县；不重复游览五台山"
+          "text": "早餐退房后离开五台山，前往浑源，约3–4小时；不重复游览五台山，不去悬空寺"
         },
         {
-          "id": "d3-old-town",
-          "time": "11:00–13:30",
-          "type": "attraction",
-          "text": "游览浑源古城/县城街区，午餐尝试浑源凉粉和当地面食"
+          "id": "d4-lunch",
+          "time": "12:00–13:00",
+          "type": "restaurant",
+          "text": "浑源午餐，尝试浑源凉粉和当地面食"
         },
         {
-          "id": "d3-yongan",
-          "time": "14:00–15:30",
+          "id": "d4-yongan",
+          "time": "13:00–15:00",
           "type": "attraction",
           "text": "参观永安寺壁画、建筑与寺院格局",
           "ticketIds": [
@@ -272,16 +413,28 @@
           ]
         },
         {
-          "id": "d3-datong",
-          "time": "16:00–18:00",
+          "id": "d4-old-town",
+          "time": "15:00–17:00",
+          "type": "walk",
+          "text": "浑源古城慢逛与休息，17:00左右启程去大同"
+        },
+        {
+          "id": "d4-datong",
+          "time": "17:00–18:30",
           "type": "drive",
-          "text": "傍晚启程前往大同古城，办理入住"
+          "text": "前往大同，车程约1–1.5小时"
+        },
+        {
+          "id": "d4-hotel",
+          "time": "18:30后",
+          "type": "check-in",
+          "text": "入住大同古城附近酒店（待定，连住两晚），优先有停车位；晚餐后按体力逛古城夜景"
         }
       ]
     },
     {
-      "day": 4,
-      "date": "2026-10-20",
+      "day": 5,
+      "date": "2026-10-21",
       "title": "大同｜云冈石窟与古城",
       "locations": [
         "大同",
@@ -292,8 +445,14 @@
       ],
       "schedule": [
         {
-          "id": "d4-yungang",
-          "time": "08:00–12:30",
+          "id": "d5-yungang-transfer",
+          "time": "08:30–09:00",
+          "type": "drive",
+          "text": "酒店出发前往云冈石窟"
+        },
+        {
+          "id": "d5-yungang",
+          "time": "09:00–12:30",
           "type": "attraction",
           "text": "云冈石窟：昙曜五窟、第20窟露天大佛、石窟博物馆",
           "ticketIds": [
@@ -301,66 +460,132 @@
           ]
         },
         {
-          "id": "d4-city",
+          "id": "d5-lunch",
+          "time": "12:30–14:00",
+          "type": "restaurant",
+          "text": "午餐后返回大同古城"
+        },
+        {
+          "id": "d5-city",
           "time": "14:00–17:30",
           "type": "attraction",
-          "text": "华严寺、善化寺、九龙壁或大同博物馆，四选二"
-        }
-      ]
-    },
-    {
-      "day": 5,
-      "date": "2026-10-21",
-      "title": "大同 → 应县木塔 → 太原｜回到机场附近",
-      "locations": [
-        "大同",
-        "应县木塔",
-        "太原武宿机场"
-      ],
-      "schedule": [
-        {
-          "id": "d5-yingxian-drive",
-          "time": "08:00–09:30",
-          "type": "drive",
-          "text": "早餐后离开大同，前往应县木塔"
+          "text": "华严寺、善化寺、九龙壁，按预约与开放时间调整顺序；华严寺为重点，其余短时参观"
         },
         {
-          "id": "d5-pagoda",
-          "time": "09:30–11:30",
-          "type": "attraction",
-          "text": "参观应县木塔及周边寺院建筑",
-          "ticketIds": [
-            "ticket-yingxian"
-          ]
-        },
-        {
-          "id": "d5-return",
-          "time": "11:30–16:00",
-          "type": "drive",
-          "text": "午餐后返回太原，入住武宿机场或太原南站附近"
+          "id": "d5-evening",
+          "time": "晚上",
+          "type": "walk",
+          "text": "大同古城夜游，晚餐尝试刀削面、烧麦；续住上一晚酒店"
         }
       ]
     },
     {
       "day": 6,
       "date": "2026-10-22",
-      "title": "太原 → 广州｜返程",
+      "title": "大同 → 应县木塔 → 太原｜市区夜游",
       "locations": [
-        "太原武宿机场",
+        "大同",
+        "应县木塔",
+        "太原",
+        "钟楼街",
+        "柳巷",
+        "食品街"
+      ],
+      "schedule": [
+        {
+          "id": "d6-yingxian-drive",
+          "time": "09:00–10:30",
+          "type": "drive",
+          "text": "早餐后离开大同，前往应县木塔"
+        },
+        {
+          "id": "d6-pagoda",
+          "time": "10:30–12:00",
+          "type": "attraction",
+          "text": "应县木塔参观、拍照，具体可进入范围以现场规定为准",
+          "ticketIds": [
+            "ticket-yingxian"
+          ]
+        },
+        {
+          "id": "d6-lunch",
+          "time": "12:00–13:00",
+          "type": "restaurant",
+          "text": "应县午餐"
+        },
+        {
+          "id": "d6-return",
+          "time": "13:00–17:00",
+          "type": "drive",
+          "text": "午餐后自驾返回太原，约3–4小时，预留休息与拥堵余量"
+        },
+        {
+          "id": "d6-hotel",
+          "time": "17:00前后",
+          "type": "check-in",
+          "text": "入住太原市区酒店（待定），优先停车方便、便于次日游览"
+        },
+        {
+          "id": "d6-evening",
+          "time": "晚上",
+          "type": "walk",
+          "text": "钟楼街、柳巷、食品街夜游与山西面食晚餐，不再安排收费景区"
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "date": "2026-10-23",
+      "title": "太原市区 → 广州｜晚间返程，次日凌晨抵达",
+      "locations": [
+        "太原",
+        "柳巷",
+        "钟楼街",
+        "太原武宿机场T1",
         "广州白云机场"
       ],
       "schedule": [
         {
-          "id": "d6-return-car",
-          "time": "14:00–17:10",
-          "type": "return",
-          "text": "租车还车、值机、安检；建议至少提前2小时到机场"
+          "id": "d7-morning",
+          "time": "上午",
+          "type": "walk",
+          "text": "睡到自然醒，早餐后市区散步；退房时寄存行李"
         },
         {
-          "id": "d6-flight",
-          "time": "17:10–20:15",
+          "id": "d7-lunch",
+          "time": "中午",
+          "type": "restaurant",
+          "text": "晋菜或山西面食午餐"
+        },
+        {
+          "id": "d7-afternoon",
+          "time": "下午–17:30",
+          "type": "walk",
+          "text": "补逛柳巷、钟楼街，购买伴手礼或休息，不增加远距离景点"
+        },
+        {
+          "id": "d7-airport-transfer",
+          "time": "17:30–19:00",
+          "type": "drive",
+          "text": "结束市区活动，取行李后前往太原机场方向，预留加油、还车及接驳时间"
+        },
+        {
+          "id": "d7-return-car",
+          "time": "19:00前后",
+          "type": "return",
+          "text": "归还租车，提前确认门店营业时间、车况检查和送航站楼方式"
+        },
+        {
+          "id": "d7-airport",
+          "time": "19:30–20:00",
+          "type": "transfer",
+          "text": "到达太原武宿机场T1，办理值机与安检"
+        },
+        {
+          "id": "d7-flight",
+          "time": "22:00–次日01:05",
           "type": "flight",
-          "text": "新海航/海南航空 HU7250：太原武宿T1 → 广州白云T3"
+          "text": "海南航空 HU7240：太原武宿T1 → 广州白云T3，10月24日01:05抵达，提前安排夜间接送"
         }
       ]
     }
@@ -435,30 +660,44 @@
     "items": [
       {
         "id": "ticket-wutai",
-        "day": 2,
+        "day": 3,
         "name": "五台山门票/景区交通",
         "requirement": "提前确认预约、进山及自驾政策",
         "status": "pending"
       },
       {
         "id": "ticket-yongan",
-        "day": 3,
+        "day": 4,
         "name": "永安寺",
         "requirement": "确认开放时间、预约与讲解安排",
         "status": "pending"
       },
       {
         "id": "ticket-yungang",
-        "day": 4,
+        "day": 5,
         "name": "云冈石窟",
         "requirement": "提前确认门票预约、开放时间和停车",
         "status": "pending"
       },
       {
         "id": "ticket-yingxian",
-        "day": 5,
+        "day": 6,
         "name": "应县木塔",
         "requirement": "确认开放时间、门票和停车",
+        "status": "pending"
+      },
+      {
+        "id": "ticket-hubei-museum",
+        "day": 2,
+        "name": "湖北省博物馆",
+        "requirement": "关注官方预约规则，预约10月18日上午时段；展厅开放及编钟演出安排以官方信息为准",
+        "status": "pending"
+      },
+      {
+        "id": "ticket-yellow-crane-tower",
+        "day": 2,
+        "name": "黄鹤楼",
+        "requirement": "提前确认10月18日下午的门票、开放时间及预约要求",
         "status": "pending"
       }
     ]
@@ -494,9 +733,11 @@
   },
   "issuesAndUncertainties": [
     "租车信息待补充",
-    "五晚酒店信息待补充",
+    "六晚具体酒店待补充；10月17日晚住宿已确定为武汉天河机场T3附近，18日凌晨入住",
     "景区开放、预约、停车和五台山自驾政策需出发前确认",
-    "Day3和Day5为长距离转场日"
+    "Day4和Day6为长距离转场日，车程为规划估算",
+    "武汉行李直挂、领取与第二程值机规则待航空公司确认",
+    "行程按10月17–23日共7天展示；返程实际于10月24日01:05抵达广州"
   ],
   "map": {
     "schemaVersion": "1.0-lite",
@@ -584,14 +825,14 @@
     ],
     "routes": [
       {
-        "day": 2,
+        "day": 3,
         "placeIds": [
           "taiyuan",
           "wutai-mountain"
         ]
       },
       {
-        "day": 3,
+        "day": 4,
         "placeIds": [
           "wutai-mountain",
           "hunyuan",
@@ -599,14 +840,14 @@
         ]
       },
       {
-        "day": 4,
+        "day": 5,
         "placeIds": [
           "datong",
           "yungang-grottoes"
         ]
       },
       {
-        "day": 5,
+        "day": 6,
         "placeIds": [
           "datong",
           "yingxian-pagoda",
@@ -625,7 +866,7 @@
         "countryCode": "CN",
         "scope": "template-schematic",
         "mapMode": "frozen-template",
-        "templateId": "compact-basin",
+        "templateId": "radial-watershed",
         "mapModeReason": "north-south-route",
         "mapModeMetrics": {
           "placeCount": 6,
@@ -639,10 +880,10 @@
           "jumpRatio": 2.53
         },
         "days": [
-          2,
           3,
           4,
-          5
+          5,
+          6
         ],
         "canvas": {
           "width": 1448,
@@ -671,46 +912,32 @@
         "annotations": [],
         "routes": [
           {
-            "day": 2,
-            "color": "#e77e22",
+            "day": 3,
+            "color": "#618344",
             "placeIds": [
               "taiyuan",
               "wutai-mountain"
             ],
             "paths": [
-              "M615.36 791.4 C705.2 717.0 770.6 625.3 807.72 521.5"
+              "M608.91 805.1 C650.8 694.6 717.1 601.6 803.94 531.45"
             ],
             "overviewPaths": [
-              "M615.36 791.4 C705.2 717.0 770.6 625.3 807.72 521.5"
-            ]
-          },
-          {
-            "day": 3,
-            "color": "#618344",
-            "placeIds": [
-              "wutai-mountain",
-              "hunyuan",
-              "datong"
-            ],
-            "paths": [
-              "M807.72 521.5 C798.5 464.5 805.5 409.6 828.24 359.9 C822.7 324.4 807.9 293.2 784.82 268.13"
-            ],
-            "overviewPaths": [
-              "M807.72 521.5 C798.5 464.5 805.5 409.6 828.24 359.9 C822.7 324.4 807.9 293.2 784.82 268.13"
+              "M608.91 805.1 C650.8 694.6 717.1 601.6 803.94 531.45"
             ]
           },
           {
             "day": 4,
             "color": "#209aaa",
             "placeIds": [
-              "datong",
-              "yungang-grottoes"
+              "wutai-mountain",
+              "hunyuan",
+              "datong"
             ],
             "paths": [
-              "M784.82 268.13 C753.3 253.3 720.2 248.1 687.61 252.96"
+              "M803.94 531.45 C827.1 477.6 833.9 421.7 823.84 367.12 C799.8 340.3 784.9 309.1 780.1 275.42"
             ],
             "overviewPaths": [
-              "M784.82 268.13 C753.3 253.3 720.2 248.1 687.61 252.96"
+              "M803.94 531.45 C827.1 477.6 833.9 421.7 823.84 367.12 C799.8 340.3 784.9 309.1 780.1 275.42"
             ]
           },
           {
@@ -718,25 +945,39 @@
             "color": "#8865a5",
             "placeIds": [
               "datong",
+              "yungang-grottoes"
+            ],
+            "paths": [
+              "M780.1 275.42 C745.5 279.5 712.5 273.9 683.08 258.97"
+            ],
+            "overviewPaths": [
+              "M780.1 275.42 C745.5 279.5 712.5 273.9 683.08 258.97"
+            ]
+          },
+          {
+            "day": 6,
+            "color": "#df6185",
+            "placeIds": [
+              "datong",
               "yingxian-pagoda",
               "taiyuan"
             ],
             "paths": [
-              "M784.82 268.13 C778.5 314.6 760.0 355.6 730.65 388.76 C662.6 517.4 623.4 654.3 615.36 791.4"
+              "M780.1 275.42 C749.7 311.3 731.5 352.5 726.4 396.7 C715.3 543.9 675.3 682.7 608.91 805.1"
             ],
             "overviewPaths": [
-              "M784.82 268.13 C778.5 314.6 760.0 355.6 730.65 388.76 C662.6 517.4 623.4 654.3 615.36 791.4"
+              "M780.1 275.42 C749.7 311.3 731.5 352.5 726.4 396.7 C715.3 543.9 675.3 682.7 608.91 805.1"
             ]
           }
         ],
         "places": [
           {
             "id": "taiyuan",
-            "x": 615.36,
-            "y": 791.4,
-            "color": "#e77e22",
-            "tx": 647.36,
-            "ty": 759.4,
+            "x": 608.91,
+            "y": 805.1,
+            "color": "#618344",
+            "tx": 640.91,
+            "ty": 773.1,
             "size": 24,
             "anchor": "start",
             "lines": [
@@ -749,17 +990,17 @@
               "lng": 112.5489
             },
             "days": [
-              2,
-              5
+              3,
+              6
             ]
           },
           {
             "id": "wutai-mountain",
-            "x": 807.72,
-            "y": 521.5,
-            "color": "#e77e22",
-            "tx": 775.72,
-            "ty": 489.5,
+            "x": 803.94,
+            "y": 531.45,
+            "color": "#618344",
+            "tx": 771.94,
+            "ty": 499.45,
             "size": 24,
             "anchor": "end",
             "lines": [
@@ -772,17 +1013,17 @@
               "lng": 113.595
             },
             "days": [
-              2,
-              3
+              3,
+              4
             ]
           },
           {
             "id": "hunyuan",
-            "x": 828.24,
-            "y": 359.9,
-            "color": "#618344",
-            "tx": 906.24,
-            "ty": 297.9,
+            "x": 823.84,
+            "y": 367.12,
+            "color": "#209aaa",
+            "tx": 901.84,
+            "ty": 305.12,
             "size": 24,
             "anchor": "start",
             "lines": [
@@ -795,16 +1036,16 @@
               "lng": 113.687
             },
             "days": [
-              3
+              4
             ]
           },
           {
             "id": "datong",
-            "x": 784.82,
-            "y": 268.13,
-            "color": "#618344",
-            "tx": 706.82,
-            "ty": 344.13,
+            "x": 780.1,
+            "y": 275.42,
+            "color": "#209aaa",
+            "tx": 702.1,
+            "ty": 351.42,
             "size": 24,
             "anchor": "end",
             "lines": [
@@ -817,18 +1058,18 @@
               "lng": 113.3007
             },
             "days": [
-              3,
               4,
-              5
+              5,
+              6
             ]
           },
           {
             "id": "yungang-grottoes",
-            "x": 687.61,
-            "y": 252.96,
-            "color": "#209aaa",
-            "tx": 825.61,
-            "ty": 164.96,
+            "x": 683.08,
+            "y": 258.97,
+            "color": "#8865a5",
+            "tx": 821.08,
+            "ty": 170.97,
             "size": 24,
             "anchor": "start",
             "lines": [
@@ -841,16 +1082,16 @@
               "lng": 113.122
             },
             "days": [
-              4
+              5
             ]
           },
           {
             "id": "yingxian-pagoda",
-            "x": 730.65,
-            "y": 388.76,
-            "color": "#8865a5",
-            "tx": 868.65,
-            "ty": 490.76,
+            "x": 726.4,
+            "y": 396.7,
+            "color": "#df6185",
+            "tx": 864.4,
+            "ty": 498.7,
             "size": 24,
             "anchor": "start",
             "lines": [
@@ -863,7 +1104,7 @@
               "lng": 113.185
             },
             "days": [
-              5
+              6
             ]
           }
         ],
@@ -876,32 +1117,32 @@
           "yingxian-pagoda"
         ],
         "dailyLayouts": {
-          "2": {
+          "3": {
             "places": [
               "taiyuan",
               "wutai-mountain"
             ],
             "labels": {
               "taiyuan": {
-                "x": 647.36,
-                "y": 759.4,
+                "x": 640.91,
+                "y": 773.1,
                 "anchor": "start"
               },
               "wutai-mountain": {
-                "x": 775.72,
-                "y": 489.5,
+                "x": 771.94,
+                "y": 499.45,
                 "anchor": "end"
               }
             },
             "transport": [
               {
                 "items": [],
-                "x": 711.54,
-                "y": 656.45
+                "x": 706.42,
+                "y": 668.28
               }
             ]
           },
-          "3": {
+          "4": {
             "places": [
               "wutai-mountain",
               "hunyuan",
@@ -909,60 +1150,60 @@
             ],
             "labels": {
               "wutai-mountain": {
-                "x": 775.72,
-                "y": 489.5,
+                "x": 771.94,
+                "y": 499.45,
                 "anchor": "end"
               },
               "hunyuan": {
-                "x": 906.24,
-                "y": 297.9,
+                "x": 901.84,
+                "y": 305.12,
                 "anchor": "start"
               },
               "datong": {
-                "x": 706.82,
-                "y": 344.13,
+                "x": 702.1,
+                "y": 351.42,
                 "anchor": "end"
               }
             },
             "transport": [
               {
                 "items": [],
-                "x": 817.98,
-                "y": 440.7
+                "x": 813.89,
+                "y": 449.29
               },
               {
                 "items": [],
-                "x": 806.53,
-                "y": 314.01
+                "x": 801.97,
+                "y": 321.27
               }
             ]
           },
-          "4": {
+          "5": {
             "places": [
               "datong",
               "yungang-grottoes"
             ],
             "labels": {
               "datong": {
-                "x": 706.82,
-                "y": 344.13,
+                "x": 702.1,
+                "y": 351.42,
                 "anchor": "end"
               },
               "yungang-grottoes": {
-                "x": 825.61,
-                "y": 164.96,
+                "x": 821.08,
+                "y": 170.97,
                 "anchor": "start"
               }
             },
             "transport": [
               {
                 "items": [],
-                "x": 736.22,
-                "y": 260.55
+                "x": 731.59,
+                "y": 267.2
               }
             ]
           },
-          "5": {
+          "6": {
             "places": [
               "datong",
               "yingxian-pagoda",
@@ -970,31 +1211,31 @@
             ],
             "labels": {
               "datong": {
-                "x": 706.82,
-                "y": 344.13,
+                "x": 702.1,
+                "y": 351.42,
                 "anchor": "end"
               },
               "yingxian-pagoda": {
-                "x": 868.65,
-                "y": 490.76,
+                "x": 864.4,
+                "y": 498.7,
                 "anchor": "start"
               },
               "taiyuan": {
-                "x": 647.36,
-                "y": 759.4,
+                "x": 640.91,
+                "y": 773.1,
                 "anchor": "start"
               }
             },
             "transport": [
               {
                 "items": [],
-                "x": 757.74,
-                "y": 328.44
+                "x": 753.25,
+                "y": 336.06
               },
               {
                 "items": [],
-                "x": 673,
-                "y": 590.08
+                "x": 667.65,
+                "y": 600.9
               }
             ]
           }
