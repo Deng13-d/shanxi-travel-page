@@ -447,7 +447,7 @@ function buildRegion(mapData, manifest) {
     const ids = (route.placeIds || []).filter((id) => placeById.has(id));
     const detailed = routePath(ids, placeById, route.day);
     const overview = routePath(overviewRouteIds(ids, overviewSet), placeById, route.day);
-    return { day: route.day, color: GOLDEN.routeColors[(route.day - 1) % GOLDEN.routeColors.length], placeIds: ids, paths: detailed ? [detailed] : [], overviewPaths: overview ? [overview] : [] };
+    return { day: route.day, title: route.title, note: route.note, color: GOLDEN.routeColors[(route.day - 1) % GOLDEN.routeColors.length], placeIds: ids, paths: detailed ? [detailed] : [], overviewPaths: overview ? [overview] : [] };
   });
   const dailyDefinitions = mapData.dailyRoutes?.length ? mapData.dailyRoutes : mapData.routes;
   const dailyLayouts = Object.fromEntries(dailyDefinitions.map((daily) => {
@@ -486,6 +486,45 @@ function buildRegion(mapData, manifest) {
   };
 }
 
+function applyTripArtwork(region, artwork) {
+  if (!region || !artwork) return region;
+  const { width, height } = artwork;
+  if (!artwork.image || !Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) {
+    throw new Error("Trip artwork requires an image and valid canvas dimensions");
+  }
+  const places = region.places.map((place) => {
+    const position = artwork.places?.[place.id];
+    if (!position || !Number.isFinite(position.x) || !Number.isFinite(position.y) || position.x < 0 || position.x > width || position.y < 0 || position.y > height) {
+      throw new Error(`Trip artwork is missing a valid position for ${place.id}`);
+    }
+    return { ...place, ...position };
+  });
+  const placeById = new Map(places.map((place) => [place.id, place]));
+  const routes = region.routes.map((route) => {
+    const paths = artwork.routes?.[String(route.day)] || [routePath(route.placeIds, placeById, route.day)];
+    return { ...route, paths, overviewPaths: paths };
+  });
+  const dailyLayouts = Object.fromEntries(Object.entries(region.dailyLayouts).map(([day, layout]) => [day, {
+    ...layout,
+    labels: Object.fromEntries(layout.places.map((placeId) => {
+      const place = placeById.get(placeId);
+      return [placeId, { x: place.tx, y: place.ty, anchor: place.anchor }];
+    })),
+    transport: layout.transport.map((pin, index) => ({ ...pin, ...(artwork.transport?.[day]?.[index] || midpoint(placeById.get(layout.places[index]), placeById.get(layout.places[index + 1]))) }))
+  }]));
+  return {
+    ...region,
+    illustrated: true,
+    canvas: { width, height },
+    baseImage: artwork.image,
+    ariaLabel: `${region.label}手绘旅行地图，共${region.days.length}天路线`,
+    overviewPlaceIds: artwork.overviewPlaceIds || region.overviewPlaceIds,
+    places,
+    routes,
+    dailyLayouts
+  };
+}
+
 const cli = argsFrom(process.argv.slice(2));
 const tripPath = absolute(cli.trip, "trip-data.json");
 const tripData = await readJson(tripPath);
@@ -516,7 +555,7 @@ if (config.modules?.overview === false) {
   if (!Array.isArray(mapData.routes) || !mapData.routes.length) throw new Error("trip-data.json map.routes must contain routes");
 
   const definitions = destinationRegions(mapData, tripData);
-  const regions = definitions.map((definition) => buildRegion(mapDataForRegion(mapData, definition, definitions.length), manifest)).filter(Boolean);
+  const regions = definitions.map((definition) => applyTripArtwork(buildRegion(mapDataForRegion(mapData, definition, definitions.length), manifest), definition.artwork)).filter(Boolean);
   if (!regions.length) throw new Error("No destination map regions contain usable places");
   for (const region of regions) await fs.access(absolute(region.baseImage));
   const output = {

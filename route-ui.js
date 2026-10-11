@@ -134,7 +134,11 @@ function renderRoutePanel(regionId, dayNumber = 0) {
   mapRoutes = mapRouteDefinitions(source);
   const route = mapRoutes.find((item) => item.day === dayNumber);
   root.innerHTML = `<div class="route-region-tabs" aria-label="旅行国家">${regions.map((region) => `<button type="button" data-route-region="${escapeHtml(region.id)}" aria-pressed="${region.id === source.id}">${escapeHtml(region.label || region.heading?.text || region.id)}</button>`).join("")}</div>
-  <div class="route-day-tabs" aria-label="${escapeHtml(source.label || "当前国家")}路线日期"><button type="button" data-route-day="0" aria-pressed="${!route}">总览</button>${mapRoutes.map((item) => { const day = state.data.days.find((candidate) => candidate.day === item.day); return day ? `<button type="button" data-route-day="${item.day}" style="--route-color:${item.color}" aria-pressed="${item === route}"><i></i>${day.date.slice(5).replace("-", "/")}</button>` : ""; }).join("")}</div>${travelMapMarkup(source, route)}`;
+  <div class="route-day-tabs" aria-label="${escapeHtml(source.label || "当前国家")}路线日期"><button type="button" data-route-day="0" aria-pressed="${!route}">总览</button>${mapRoutes.map((item) => { const day = state.data.days.find((candidate) => candidate.day === item.day); return day ? `<button type="button" data-route-day="${item.day}" style="--route-color:${item.color}" aria-pressed="${item === route}"><i></i>${day.date.slice(5).replace("-", "/")}</button>` : ""; }).join("")}</div>${travelMapMarkup(source, route)}
+  ${source.illustrated ? `<div class="route-summaries" aria-label="每日路线说明">${source.routes.filter((item) => !route || item.day === route.day).map((item) => {
+    const day = state.data.days.find((candidate) => candidate.day === item.day);
+    return `<button type="button" class="route-summary" data-route-day="${item.day}" style="--route-color:${item.color}" aria-label="查看${escapeHtml(day.date.slice(5).replace("-", "/"))}路线：${escapeHtml(item.title || day.title)}"><span>${escapeHtml(day.date.slice(5).replace("-", "/"))}</span><strong>${escapeHtml(item.title || day.title)}</strong><small>${escapeHtml(item.note || "")}</small></button>`;
+  }).join("")}</div>` : ""}`;
   if (route) activateDayMaps(root);
 }
 

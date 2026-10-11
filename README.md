@@ -52,6 +52,8 @@ Agent 会先阅读和整理你的旅行计划，确认需要的模块以及明�
 
 如果你对地图有更高要求，也可以在第一版页面完成后，再单独让 AI 对地图继续修改和完善。
 
+本次山西页面使用用户提供的秋景手绘地图，原图保存在 `assets/trip/shanxi-autumn-route-map.png`。地点位置与示意连线在 `trip-data.json` 的 `map.region.artwork` 中维护，每日路线标题与说明在 `map.routes` 中维护。运行 `npm run build:map` 会保留这张手绘底图，并同步生成总览与每日地图；连线只表示游览顺序，不作为道路导航。
+
 ---
 
 ## 本地预览

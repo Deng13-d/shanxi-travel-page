@@ -24,11 +24,11 @@
   },
   "metadata": {
     "tripId": "shanxi-road-trip-20261017-22",
-    "title": "山西自驾｜太原·五台山·浑源·大同·应县",
+    "title": "山西自驾｜太原·芦芽山周边·五寨·东寨·大同·应县",
     "language": "zh-CN",
     "assets": {
       "routeMaps": [
-        "assets/trip/shanxi-route-map.png"
+        "assets/trip/shanxi-autumn-route-map.png"
       ],
       "backgrounds": [
         {
@@ -58,12 +58,13 @@
     ],
     "citiesAndAreas": [
       "太原",
-      "五台山",
-      "浑源",
+      "芦芽山周边",
+      "五寨县",
+      "东寨镇",
       "大同",
       "应县"
     ],
-    "routeSummary": "惠州 → 武汉中转一日游 → 太原 → 五台山 → 浑源古城/永安寺 → 大同 → 应县木塔 → 太原 → 广州（10月24日凌晨抵达）",
+    "routeSummary": "惠州 → 武汉中转一日游 → 太原 → 五坝线（坝门口村、五寨县一带）→ 沂五线 → 东寨镇（芦芽山周边，不进景区）→ 大同 → 应县木塔 → 太原 → 广州（10月24日凌晨抵达）",
     "groupSize": null,
     "primaryDestinationName": "山西",
     "heroTitle": "山西自驾之旅"
@@ -184,7 +185,7 @@
       },
       "pickup": {
         "date": "2026-10-19",
-        "time": "08:00–09:00（建议，待确认）",
+        "time": "08:30–09:00（建议，待确认）",
         "location": "太原武宿机场",
         "utcOffset": "+08:00"
       },
@@ -205,8 +206,11 @@
     },
     "rentalChecklist": [],
     "drivingNotes": [
-      "Day3（10月19日）08:00–09:00取车，约09:00出发去五台山；前一晚晚到，避免疲劳驾驶。",
-      "Day4（10月20日）五台山→浑源→大同，建议08:30–09:00出发，17:00左右离开浑源。",
+      "Day3（10月19日）08:30–09:00太原取车、加满油，走五坝线，经坝门口村、五寨县一带，再走沂五线到东寨镇住宿；仅游览芦芽山周边公路，不进入景区。",
+      "五坝线、沂五线的正式道路名称、入口、通行及天气需出发前核对；分段设置导航途经点，不能只导航东寨镇而跳过计划公路。",
+      "Day3前一晚晚到太原，避免过早出发和疲劳驾驶；沿途只在安全停车点短暂停留，争取天黑前到东寨。",
+      "若出发较晚、天气不佳或预计无法天黑前到东寨，则在五寨县住宿，次日按路况调整前往大同，不强行夜间走山路。",
+      "Day4（10月20日）08:30左右从东寨镇出发去大同，中午或下午抵达为计划目标，以实时导航为准；当天以休息与古城散步为主。",
       "Day6（10月22日）大同→应县木塔→太原市区，预留午餐与休息时间。",
       "Day7（10月23日）19:00前后还车，19:30–20:00到太原武宿T1；确认门店营业及接驳安排。",
       "建议10月19日上午取车、23日晚还车；租期和超时费用按租车公司24小时计费规则确认。",
@@ -335,100 +339,93 @@
     {
       "day": 3,
       "date": "2026-10-19",
-      "title": "太原 → 五台山｜台怀镇寺庙群",
+      "title": "太原 → 五坝线 → 沂五线 → 东寨｜芦芽山周边公路自驾",
       "locations": [
         "太原",
-        "五台山",
-        "五爷庙",
-        "塔院寺",
-        "显通寺",
-        "菩萨顶"
+        "五坝线",
+        "坝门口村",
+        "五寨县",
+        "沂五线",
+        "东寨镇",
+        "芦芽山周边（不进景区）"
       ],
       "schedule": [
         {
           "id": "d3-pickup",
-          "time": "08:00–09:00",
+          "time": "08:30–09:00",
           "type": "transfer",
-          "text": "早餐、太原取车并检查车辆，租车公司与订单待补充"
+          "text": "早餐、太原取车、检查车辆并加满油；租车公司与订单待补充，前一晚晚到，不安排过早出发"
         },
         {
-          "id": "d3-drive",
-          "time": "09:00–12:30",
+          "id": "d3-wuba-drive",
+          "time": "上午",
           "type": "drive",
-          "text": "驾车前往五台山台怀镇，约3–4小时，景区进出与停车另留余量"
+          "text": "太原出发，按实时导航前往五坝线，经坝门口村、五寨县一带；分段设置途经点，沿途只在安全停车处短暂停留"
         },
         {
           "id": "d3-lunch",
-          "time": "12:30–13:30",
+          "time": "中午",
           "type": "restaurant",
-          "text": "台怀镇午餐、寄存行李"
+          "text": "五寨县或沿线午餐、休息，结合当天路况评估下午行程"
         },
         {
-          "id": "d3-temples",
-          "time": "13:30–17:30",
-          "type": "attraction",
-          "text": "菩萨顶、显通寺、塔院寺、五爷庙；按到达时间、开放与排队情况调整，不安排登台顶或大朝台，不为补景点赶路",
-          "ticketIds": [
-            "ticket-wutai"
-          ]
+          "id": "d3-yiwu-drive",
+          "time": "下午",
+          "type": "drive",
+          "text": "由五寨县一带走沂五线到东寨镇，欣赏芦芽山周边公路风景，不进入景区；道路名称及通行条件待出发前核对，少量停留，争取天黑前到达"
         },
         {
           "id": "d3-hotel",
-          "time": "晚上",
+          "time": "傍晚（以实时路况为准）",
           "type": "check-in",
-          "text": "台怀镇晚餐、入住休息；酒店待定，优先确认供暖及停车"
+          "text": "入住东寨镇酒店（待定），晚餐、休息；优先确认供暖和停车，提前联系酒店说明预计抵达时间"
+        },
+        {
+          "id": "d3-road-backup",
+          "time": "备用安排",
+          "type": "note",
+          "text": "若出发较晚、道路管制、天气不佳或导航预计无法天黑前到东寨，改住五寨县；次日根据路况调整去大同，不强行夜间走山路"
         }
       ]
     },
     {
       "day": 4,
       "date": "2026-10-20",
-      "title": "五台山 → 浑源 → 大同｜古建与长距离转场",
+      "title": "东寨镇 → 大同｜入住休息与古城散步",
       "locations": [
-        "五台山",
-        "浑源古城",
-        "永安寺",
+        "东寨镇",
         "大同"
       ],
       "schedule": [
         {
-          "id": "d4-drive-hunyuan",
-          "time": "08:30–12:00",
+          "id": "d4-drive-datong",
+          "time": "08:30左右出发",
           "type": "drive",
-          "text": "早餐退房后离开五台山，前往浑源，约3–4小时；不重复游览五台山，不去悬空寺"
+          "text": "东寨镇早餐、退房后自驾前往大同，按实时导航选择通畅路线，途中安排休息；计划中午或下午抵达，车程以当天路况为准"
         },
         {
           "id": "d4-lunch",
-          "time": "12:00–13:00",
+          "time": "中午",
           "type": "restaurant",
-          "text": "浑源午餐，尝试浑源凉粉和当地面食"
-        },
-        {
-          "id": "d4-yongan",
-          "time": "13:00–15:00",
-          "type": "attraction",
-          "text": "参观永安寺壁画、建筑与寺院格局",
-          "ticketIds": [
-            "ticket-yongan"
-          ]
-        },
-        {
-          "id": "d4-old-town",
-          "time": "15:00–17:00",
-          "type": "walk",
-          "text": "浑源古城慢逛与休息，17:00左右启程去大同"
-        },
-        {
-          "id": "d4-datong",
-          "time": "17:00–18:30",
-          "type": "drive",
-          "text": "前往大同，车程约1–1.5小时"
+          "text": "途中或抵达大同后午餐，不为赶时间省略休息"
         },
         {
           "id": "d4-hotel",
-          "time": "18:30后",
+          "time": "抵达后",
           "type": "check-in",
-          "text": "入住大同古城附近酒店（待定，连住两晚），优先有停车位；晚餐后按体力逛古城夜景"
+          "text": "入住大同古城附近酒店（待定，连住两晚），优先有停车位；若未到入住时间先寄存行李，午后休息"
+        },
+        {
+          "id": "d4-old-town",
+          "time": "下午",
+          "type": "walk",
+          "text": "按体力在大同古城轻松散步，不安排新的远距离景点；云冈石窟与古建参观放在21日"
+        },
+        {
+          "id": "d4-evening",
+          "time": "晚上",
+          "type": "walk",
+          "text": "大同晚餐与古城夜景，早点休息，为次日云冈石窟游览留足体力"
         }
       ]
     },
@@ -602,23 +599,23 @@
       }
     },
     {
-      "id": "wutai-mountain",
-      "name": "Mount Wutai",
-      "nameZh": "五台山",
-      "type": "area",
+      "id": "wuzhai",
+      "name": "Wuzhai",
+      "nameZh": "五寨县",
+      "type": "city",
       "geo": {
-        "lat": 39.005,
-        "lng": 113.595
+        "lat": 38.91,
+        "lng": 111.85
       }
     },
     {
-      "id": "hunyuan",
-      "name": "Hunyuan",
-      "nameZh": "浑源古城",
-      "type": "city",
+      "id": "dongzhai",
+      "name": "Dongzhai",
+      "nameZh": "东寨镇（芦芽山周边）",
+      "type": "town",
       "geo": {
-        "lat": 39.699,
-        "lng": 113.687
+        "lat": 38.82,
+        "lng": 112.08
       }
     },
     {
@@ -658,20 +655,6 @@
     "statusStorage": "local",
     "statusStorageNote": "门票状态仅保存在当前浏览器。",
     "items": [
-      {
-        "id": "ticket-wutai",
-        "day": 3,
-        "name": "五台山门票/景区交通",
-        "requirement": "提前确认预约、进山及自驾政策",
-        "status": "pending"
-      },
-      {
-        "id": "ticket-yongan",
-        "day": 4,
-        "name": "永安寺",
-        "requirement": "确认开放时间、预约与讲解安排",
-        "status": "pending"
-      },
       {
         "id": "ticket-yungang",
         "day": 5,
@@ -734,8 +717,9 @@
   "issuesAndUncertainties": [
     "租车信息待补充",
     "六晚具体酒店待补充；10月17日晚住宿已确定为武汉天河机场T3附近，18日凌晨入住",
-    "景区开放、预约、停车和五台山自驾政策需出发前确认",
-    "Day4和Day6为长距离转场日，车程为规划估算",
+    "19日走芦芽山周边公路，不进入景区；五坝线、沂五线的正式名称、路线入口与通行条件待核对",
+    "Day3山路行程及Day4、Day6转场时间为规划估算；出发前确认天气、结霜、施工与临时管制，尽量白天行驶",
+    "19日晚计划住东寨镇；若预计无法天黑前抵达，则改住五寨县，次日按路况调整去大同",
     "武汉行李直挂、领取与第二程值机规则待航空公司确认",
     "行程按10月17–23日共7天展示；返程实际于10月24日01:05抵达广州"
   ],
@@ -744,7 +728,7 @@
     "mapMode": "template-auto",
     "templateId": "auto",
     "defaultRegionId": "shanxi",
-    "disclaimer": "本图仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
+    "disclaimer": "手绘路线示意 · 点击日期查看当天路线，点击下方卡片查看安排。",
     "region": {
       "id": "shanxi",
       "label": "山西",
@@ -753,7 +737,130 @@
         "CN"
       ],
       "heading": "山西自驾路线",
-      "description": "太原、五台山、浑源、大同与应县木塔的行程示意。"
+      "description": "10月19–22日山西自驾：太原 → 芦芽山周边公路（五寨、东寨）→ 大同 → 应县木塔 → 太原。手绘地点与连线仅表示游览顺序，非实际道路。",
+      "artwork": {
+        "image": "assets/trip/shanxi-autumn-route-map.png",
+        "width": 1536,
+        "height": 1024,
+        "overviewPlaceIds": [
+          "taiyuan",
+          "dongzhai",
+          "datong",
+          "yingxian-pagoda"
+        ],
+        "places": {
+          "taiyuan": {
+            "x": 856,
+            "y": 645,
+            "tx": 900,
+            "ty": 680,
+            "lines": [
+              "太原"
+            ],
+            "showLabel": false
+          },
+          "wuzhai": {
+            "x": 410,
+            "y": 330,
+            "tx": 385,
+            "ty": 310,
+            "anchor": "end",
+            "lines": [
+              "五寨县"
+            ],
+            "size": 22
+          },
+          "dongzhai": {
+            "x": 500,
+            "y": 404,
+            "tx": 550,
+            "ty": 530,
+            "lines": [
+              "东寨镇"
+            ],
+            "size": 22
+          },
+          "datong": {
+            "x": 779,
+            "y": 230,
+            "tx": 815,
+            "ty": 250,
+            "lines": [
+              "大同"
+            ],
+            "showLabel": false
+          },
+          "yungang-grottoes": {
+            "x": 625,
+            "y": 177,
+            "tx": 600,
+            "ty": 150,
+            "anchor": "end",
+            "lines": [
+              "云冈石窟"
+            ],
+            "size": 22
+          },
+          "yingxian-pagoda": {
+            "x": 1055,
+            "y": 465,
+            "tx": 1110,
+            "ty": 490,
+            "lines": [
+              "应县木塔"
+            ],
+            "showLabel": false
+          }
+        },
+        "routes": {
+          "3": [
+            "M856 645 C740 660 585 685 420 610 C310 555 305 390 410 330 C445 345 470 375 500 404"
+          ],
+          "4": [
+            "M500 404 C570 330 640 290 705 265 C740 250 760 240 779 230"
+          ],
+          "5": [
+            "M779 230 C735 205 680 190 625 177"
+          ],
+          "6": [
+            "M779 230 C890 220 975 280 1015 370 C1035 410 1050 440 1055 465 C1010 535 940 585 856 645"
+          ]
+        },
+        "transport": {
+          "3": [
+            {
+              "x": 342,
+              "y": 478
+            },
+            {
+              "x": 456,
+              "y": 362
+            }
+          ],
+          "4": [
+            {
+              "x": 604,
+              "y": 317
+            }
+          ],
+          "5": [
+            {
+              "x": 705,
+              "y": 199
+            }
+          ],
+          "6": [
+            {
+              "x": 924,
+              "y": 263
+            },
+            {
+              "x": 970,
+              "y": 564
+            }
+          ]
+        }
+      }
     },
     "places": [
       {
@@ -768,25 +875,27 @@
         }
       },
       {
-        "id": "wutai-mountain",
-        "name": "Mount Wutai",
-        "nameZh": "五台山",
+        "id": "wuzhai",
+        "name": "Wuzhai",
+        "nameZh": "五寨县",
+        "query": "山西省忻州市五寨县",
         "countryCode": "CN",
         "mapRegionId": "shanxi",
         "geo": {
-          "lat": 39.005,
-          "lng": 113.595
+          "lat": 38.91,
+          "lng": 111.85
         }
       },
       {
-        "id": "hunyuan",
-        "name": "Hunyuan",
-        "nameZh": "浑源古城",
+        "id": "dongzhai",
+        "name": "Dongzhai",
+        "nameZh": "东寨镇（芦芽山周边）",
+        "query": "山西省忻州市宁武县东寨镇",
         "countryCode": "CN",
         "mapRegionId": "shanxi",
         "geo": {
-          "lat": 39.699,
-          "lng": 113.687
+          "lat": 38.82,
+          "lng": 112.08
         }
       },
       {
@@ -826,17 +935,70 @@
     "routes": [
       {
         "day": 3,
+        "title": "太原 → 五寨 → 东寨",
+        "note": "五坝线接沂五线，沿途赏秋；晚住东寨。芦芽山不进景区，路况不佳时改住五寨。",
         "placeIds": [
           "taiyuan",
-          "wutai-mountain"
+          "wuzhai",
+          "dongzhai"
+        ]
+      },
+      {
+        "day": 4,
+        "title": "东寨 → 大同",
+        "note": "早餐后出发，抵达后入住休息；下午古城散步，大同连住两晚。",
+        "placeIds": [
+          "dongzhai",
+          "datong"
+        ]
+      },
+      {
+        "day": 5,
+        "title": "云冈石窟 · 大同古城",
+        "note": "上午云冈石窟，下午华严寺、善化寺与九龙壁，按开放时间调整。",
+        "placeIds": [
+          "datong",
+          "yungang-grottoes"
+        ]
+      },
+      {
+        "day": 6,
+        "title": "大同 → 应县木塔 → 太原",
+        "note": "上午应县木塔，午餐后返回太原；晚上钟楼街、柳巷与食品街。",
+        "placeIds": [
+          "datong",
+          "yingxian-pagoda",
+          "taiyuan"
+        ]
+      }
+    ],
+    "dailyRoutes": [
+      {
+        "day": 3,
+        "placeIds": [
+          "taiyuan",
+          "wuzhai",
+          "dongzhai"
+        ],
+        "scheduleItems": [
+          [
+            "d3-wuba-drive"
+          ],
+          [
+            "d3-yiwu-drive"
+          ]
         ]
       },
       {
         "day": 4,
         "placeIds": [
-          "wutai-mountain",
-          "hunyuan",
+          "dongzhai",
           "datong"
+        ],
+        "scheduleItems": [
+          [
+            "d4-drive-datong"
+          ]
         ]
       },
       {
@@ -844,6 +1006,11 @@
         "placeIds": [
           "datong",
           "yungang-grottoes"
+        ],
+        "scheduleItems": [
+          [
+            "d5-yungang-transfer"
+          ]
         ]
       },
       {
@@ -852,10 +1019,17 @@
           "datong",
           "yingxian-pagoda",
           "taiyuan"
+        ],
+        "scheduleItems": [
+          [
+            "d6-yingxian-drive"
+          ],
+          [
+            "d6-return"
+          ]
         ]
       }
-    ],
-    "dailyRoutes": []
+    ]
   },
   "routeMap": {
     "defaultRegionId": "shanxi",
@@ -866,18 +1040,18 @@
         "countryCode": "CN",
         "scope": "template-schematic",
         "mapMode": "frozen-template",
-        "templateId": "radial-watershed",
+        "templateId": "compact-basin",
         "mapModeReason": "north-south-route",
         "mapModeMetrics": {
           "placeCount": 6,
           "geoPlaceCount": 6,
-          "widthKm": 97.64,
+          "widthKm": 124.74,
           "heightKm": 248.57,
           "spanKm": 253.89,
-          "averageNearestKm": 58.24,
+          "averageNearestKm": 41.14,
           "components": 1,
           "largestLegKm": 196.32,
-          "jumpRatio": 2.53
+          "jumpRatio": 1.5
         },
         "days": [
           3,
@@ -886,18 +1060,18 @@
           6
         ],
         "canvas": {
-          "width": 1448,
-          "height": 1086
+          "width": 1536,
+          "height": 1024
         },
         "projection": {
           "type": "relative-schematic",
           "bounds": null
         },
-        "baseImage": "assets/trip/shanxi-route-map.png",
+        "baseImage": "assets/trip/shanxi-autumn-route-map.png",
         "title": "山西 · 旅行路线",
-        "ariaLabel": "山西模板化旅行路线示意图，共4天",
-        "description": "太原、五台山、浑源、大同与应县木塔的行程示意。",
-        "disclaimer": "本图仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
+        "ariaLabel": "山西手绘旅行地图，共4天路线",
+        "description": "10月19–22日山西自驾：太原 → 芦芽山周边公路（五寨、东寨）→ 大同 → 应县木塔 → 太原。手绘地点与连线仅表示游览顺序，非实际道路。",
+        "disclaimer": "手绘路线示意 · 点击日期查看当天路线，点击下方卡片查看安排。",
         "heading": {
           "text": "山西自驾路线",
           "x": 33,
@@ -913,49 +1087,57 @@
         "routes": [
           {
             "day": 3,
+            "title": "太原 → 五寨 → 东寨",
+            "note": "五坝线接沂五线，沿途赏秋；晚住东寨。芦芽山不进景区，路况不佳时改住五寨。",
             "color": "#618344",
             "placeIds": [
               "taiyuan",
-              "wutai-mountain"
+              "wuzhai",
+              "dongzhai"
             ],
             "paths": [
-              "M608.91 805.1 C650.8 694.6 717.1 601.6 803.94 531.45"
+              "M856 645 C740 660 585 685 420 610 C310 555 305 390 410 330 C445 345 470 375 500 404"
             ],
             "overviewPaths": [
-              "M608.91 805.1 C650.8 694.6 717.1 601.6 803.94 531.45"
+              "M856 645 C740 660 585 685 420 610 C310 555 305 390 410 330 C445 345 470 375 500 404"
             ]
           },
           {
             "day": 4,
+            "title": "东寨 → 大同",
+            "note": "早餐后出发，抵达后入住休息；下午古城散步，大同连住两晚。",
             "color": "#209aaa",
             "placeIds": [
-              "wutai-mountain",
-              "hunyuan",
+              "dongzhai",
               "datong"
             ],
             "paths": [
-              "M803.94 531.45 C827.1 477.6 833.9 421.7 823.84 367.12 C799.8 340.3 784.9 309.1 780.1 275.42"
+              "M500 404 C570 330 640 290 705 265 C740 250 760 240 779 230"
             ],
             "overviewPaths": [
-              "M803.94 531.45 C827.1 477.6 833.9 421.7 823.84 367.12 C799.8 340.3 784.9 309.1 780.1 275.42"
+              "M500 404 C570 330 640 290 705 265 C740 250 760 240 779 230"
             ]
           },
           {
             "day": 5,
+            "title": "云冈石窟 · 大同古城",
+            "note": "上午云冈石窟，下午华严寺、善化寺与九龙壁，按开放时间调整。",
             "color": "#8865a5",
             "placeIds": [
               "datong",
               "yungang-grottoes"
             ],
             "paths": [
-              "M780.1 275.42 C745.5 279.5 712.5 273.9 683.08 258.97"
+              "M779 230 C735 205 680 190 625 177"
             ],
             "overviewPaths": [
-              "M780.1 275.42 C745.5 279.5 712.5 273.9 683.08 258.97"
+              "M779 230 C735 205 680 190 625 177"
             ]
           },
           {
             "day": 6,
+            "title": "大同 → 应县木塔 → 太原",
+            "note": "上午应县木塔，午餐后返回太原；晚上钟楼街、柳巷与食品街。",
             "color": "#df6185",
             "placeIds": [
               "datong",
@@ -963,25 +1145,24 @@
               "taiyuan"
             ],
             "paths": [
-              "M780.1 275.42 C749.7 311.3 731.5 352.5 726.4 396.7 C715.3 543.9 675.3 682.7 608.91 805.1"
+              "M779 230 C890 220 975 280 1015 370 C1035 410 1050 440 1055 465 C1010 535 940 585 856 645"
             ],
             "overviewPaths": [
-              "M780.1 275.42 C749.7 311.3 731.5 352.5 726.4 396.7 C715.3 543.9 675.3 682.7 608.91 805.1"
+              "M779 230 C890 220 975 280 1015 370 C1035 410 1050 440 1055 465 C1010 535 940 585 856 645"
             ]
           }
         ],
         "places": [
           {
             "id": "taiyuan",
-            "x": 608.91,
-            "y": 805.1,
+            "x": 856,
+            "y": 645,
             "color": "#618344",
-            "tx": 640.91,
-            "ty": 773.1,
+            "tx": 900,
+            "ty": 680,
             "size": 24,
             "anchor": "start",
             "lines": [
-              "Taiyuan /",
               "太原"
             ],
             "query": "Taiyuan 山西",
@@ -992,25 +1173,46 @@
             "days": [
               3,
               6
+            ],
+            "showLabel": false
+          },
+          {
+            "id": "wuzhai",
+            "x": 410,
+            "y": 330,
+            "color": "#618344",
+            "tx": 385,
+            "ty": 310,
+            "size": 22,
+            "anchor": "end",
+            "lines": [
+              "五寨县"
+            ],
+            "query": "山西省忻州市五寨县",
+            "geo": {
+              "lat": 38.91,
+              "lng": 111.85
+            },
+            "days": [
+              3
             ]
           },
           {
-            "id": "wutai-mountain",
-            "x": 803.94,
-            "y": 531.45,
+            "id": "dongzhai",
+            "x": 500,
+            "y": 404,
             "color": "#618344",
-            "tx": 771.94,
-            "ty": 499.45,
-            "size": 24,
-            "anchor": "end",
+            "tx": 550,
+            "ty": 530,
+            "size": 22,
+            "anchor": "start",
             "lines": [
-              "Mount Wutai /",
-              "五台山"
+              "东寨镇"
             ],
-            "query": "Mount Wutai 山西",
+            "query": "山西省忻州市宁武县东寨镇",
             "geo": {
-              "lat": 39.005,
-              "lng": 113.595
+              "lat": 38.82,
+              "lng": 112.08
             },
             "days": [
               3,
@@ -1018,39 +1220,16 @@
             ]
           },
           {
-            "id": "hunyuan",
-            "x": 823.84,
-            "y": 367.12,
-            "color": "#209aaa",
-            "tx": 901.84,
-            "ty": 305.12,
-            "size": 24,
-            "anchor": "start",
-            "lines": [
-              "Hunyuan /",
-              "浑源古城"
-            ],
-            "query": "Hunyuan 山西",
-            "geo": {
-              "lat": 39.699,
-              "lng": 113.687
-            },
-            "days": [
-              4
-            ]
-          },
-          {
             "id": "datong",
-            "x": 780.1,
-            "y": 275.42,
+            "x": 779,
+            "y": 230,
             "color": "#209aaa",
-            "tx": 702.1,
-            "ty": 351.42,
+            "tx": 815,
+            "ty": 250,
             "size": 24,
             "anchor": "end",
             "lines": [
-              "Datong /",
-              "大同古城"
+              "大同"
             ],
             "query": "Datong 山西",
             "geo": {
@@ -1061,19 +1240,19 @@
               4,
               5,
               6
-            ]
+            ],
+            "showLabel": false
           },
           {
             "id": "yungang-grottoes",
-            "x": 683.08,
-            "y": 258.97,
+            "x": 625,
+            "y": 177,
             "color": "#8865a5",
-            "tx": 821.08,
-            "ty": 170.97,
-            "size": 24,
-            "anchor": "start",
+            "tx": 600,
+            "ty": 150,
+            "size": 22,
+            "anchor": "end",
             "lines": [
-              "Yungang Grottoes /",
               "云冈石窟"
             ],
             "query": "Yungang Grottoes 山西",
@@ -1087,15 +1266,14 @@
           },
           {
             "id": "yingxian-pagoda",
-            "x": 726.4,
-            "y": 396.7,
+            "x": 1055,
+            "y": 465,
             "color": "#df6185",
-            "tx": 864.4,
-            "ty": 498.7,
+            "tx": 1110,
+            "ty": 490,
             "size": 24,
             "anchor": "start",
             "lines": [
-              "Yingxian Wooden Pagoda /",
               "应县木塔"
             ],
             "query": "Yingxian Wooden Pagoda 山西",
@@ -1105,76 +1283,81 @@
             },
             "days": [
               6
-            ]
+            ],
+            "showLabel": false
           }
         ],
         "overviewPlaceIds": [
           "taiyuan",
-          "wutai-mountain",
-          "hunyuan",
+          "dongzhai",
           "datong",
-          "yungang-grottoes",
           "yingxian-pagoda"
         ],
         "dailyLayouts": {
           "3": {
             "places": [
               "taiyuan",
-              "wutai-mountain"
+              "wuzhai",
+              "dongzhai"
             ],
             "labels": {
               "taiyuan": {
-                "x": 640.91,
-                "y": 773.1,
+                "x": 900,
+                "y": 680,
                 "anchor": "start"
               },
-              "wutai-mountain": {
-                "x": 771.94,
-                "y": 499.45,
+              "wuzhai": {
+                "x": 385,
+                "y": 310,
                 "anchor": "end"
+              },
+              "dongzhai": {
+                "x": 550,
+                "y": 530,
+                "anchor": "start"
               }
             },
             "transport": [
               {
-                "items": [],
-                "x": 706.42,
-                "y": 668.28
+                "items": [
+                  "d3-wuba-drive"
+                ],
+                "x": 342,
+                "y": 478
+              },
+              {
+                "items": [
+                  "d3-yiwu-drive"
+                ],
+                "x": 456,
+                "y": 362
               }
             ]
           },
           "4": {
             "places": [
-              "wutai-mountain",
-              "hunyuan",
+              "dongzhai",
               "datong"
             ],
             "labels": {
-              "wutai-mountain": {
-                "x": 771.94,
-                "y": 499.45,
-                "anchor": "end"
-              },
-              "hunyuan": {
-                "x": 901.84,
-                "y": 305.12,
+              "dongzhai": {
+                "x": 550,
+                "y": 530,
                 "anchor": "start"
               },
               "datong": {
-                "x": 702.1,
-                "y": 351.42,
+                "x": 815,
+                "y": 250,
                 "anchor": "end"
               }
             },
             "transport": [
               {
-                "items": [],
-                "x": 813.89,
-                "y": 449.29
-              },
-              {
-                "items": [],
-                "x": 801.97,
-                "y": 321.27
+                "items": [
+                  "d4-drive-datong"
+                ],
+                "x": 604,
+                "y": 317
               }
             ]
           },
@@ -1185,21 +1368,23 @@
             ],
             "labels": {
               "datong": {
-                "x": 702.1,
-                "y": 351.42,
+                "x": 815,
+                "y": 250,
                 "anchor": "end"
               },
               "yungang-grottoes": {
-                "x": 821.08,
-                "y": 170.97,
-                "anchor": "start"
+                "x": 600,
+                "y": 150,
+                "anchor": "end"
               }
             },
             "transport": [
               {
-                "items": [],
-                "x": 731.59,
-                "y": 267.2
+                "items": [
+                  "d5-yungang-transfer"
+                ],
+                "x": 705,
+                "y": 199
               }
             ]
           },
@@ -1211,35 +1396,40 @@
             ],
             "labels": {
               "datong": {
-                "x": 702.1,
-                "y": 351.42,
+                "x": 815,
+                "y": 250,
                 "anchor": "end"
               },
               "yingxian-pagoda": {
-                "x": 864.4,
-                "y": 498.7,
+                "x": 1110,
+                "y": 490,
                 "anchor": "start"
               },
               "taiyuan": {
-                "x": 640.91,
-                "y": 773.1,
+                "x": 900,
+                "y": 680,
                 "anchor": "start"
               }
             },
             "transport": [
               {
-                "items": [],
-                "x": 753.25,
-                "y": 336.06
+                "items": [
+                  "d6-yingxian-drive"
+                ],
+                "x": 924,
+                "y": 263
               },
               {
-                "items": [],
-                "x": 667.65,
-                "y": 600.9
+                "items": [
+                  "d6-return"
+                ],
+                "x": 970,
+                "y": 564
               }
             ]
           }
-        }
+        },
+        "illustrated": true
       }
     ]
   }

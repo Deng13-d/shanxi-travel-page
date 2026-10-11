@@ -85,8 +85,7 @@ main { overflow: hidden; }
 .hero { position: relative; isolation: isolate; overflow: hidden; padding: 32px 18px 24px; min-height: 310px; display: flex; flex-direction: column; justify-content: flex-end; background: linear-gradient(180deg, rgba(19,38,47,.08), rgba(19,38,47,.72)), url("assets/trip/shanxi-cultural-collage.png") center 42%/cover; color: #fffaf0; }
 .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(49,29,19,.78), rgba(49,29,19,.2) 68%, rgba(49,29,19,.38)); }
 .hero h1, .hero__eyebrow, .hero__date { position: relative; text-shadow: 0 2px 18px rgba(25,15,10,.45); }
-.route-section { position: relative; background: linear-gradient(180deg, rgba(249,247,239,.94), rgba(249,247,239,.98)), url("assets/trip/shanxi-route-map.png") center/cover; }
-.route-section::before { content: "五台山 · 浑源 · 大同 · 应县"; position: absolute; top: 28px; right: 18px; color: rgba(128,70,37,.48); font: 700 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .12em; }
+.route-section { position: relative; background: #f9f7ef; }
 .route-section #overview-place-names,
 .route-section #overview-geographic-names,
 .route-section #overview-heading,
@@ -403,6 +402,13 @@ main { overflow: hidden; }
 .transport-popover p {margin:7px 0 0;}
 .transport-popover button {position:absolute;right:4px;top:4px;background:transparent;border:0;width:28px;height:28px;cursor:pointer;}
 .route-list-overview {border-top:1px solid var(--line);}
+.route-summaries {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:4px 0 18px;}
+.route-summary {display:grid;grid-template-columns:48px 1fr;gap:6px 10px;padding:14px;text-align:left;border:1px solid rgba(128,70,37,.16);border-radius:10px;background:rgba(255,252,244,.75);color:var(--ink);font:inherit;cursor:pointer;}
+.route-summary:hover,.route-summary:focus-visible {background:#fffdf5;border-color:var(--route-color);}
+.route-summary > span {grid-row:span 2;align-self:start;border-left:3px solid var(--route-color);padding-left:8px;color:var(--route-color);font-size:12px;font-weight:750;}
+.route-summary strong {font-size:14px;line-height:1.5;}
+.route-summary small {grid-column:2;color:var(--muted);font-size:12px;line-height:1.65;}
+@media(max-width:699px) {.route-summaries {grid-template-columns:1fr;} .route-summary {padding:12px;}}
 .route-list-overview a {display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;font-size:14px;}
 .route-list-overview span {white-space:nowrap;color:var(--muted);font-size:12px;}
 .day-detail .travel-map-block {margin:0 0 22px;}
